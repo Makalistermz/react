@@ -1,14 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// Comonente pai
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+// Importar o componente filho
+import FunctionalComponent from './components/FunctionalComponent'
+import ClassComponents from './components/ClassComponents'
+import PropsExemple from './components/PropsExemple'
 
+function App() {
   return (
     <>
-      <p>Hello World React</p>
+      <h1>Hello World React</h1>
+      {/* Comentario dentro do jsx*/}
+      <FunctionalComponent/>
+      <ClassComponents/>
+      <PropsExemple nome="Makalister" idade={18}/>
     </>
   )
 }
