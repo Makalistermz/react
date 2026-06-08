@@ -1,5 +1,5 @@
 // Componente pai
-import { useState } from 'react'
+import { useState, useEffect } from 'react';
 import './App.css'
 
 // Importar o componente filho
@@ -35,9 +35,17 @@ function ButtonTwo() {
     alert('Você clicou no botão!')
   }
 
-
 function App() {
   const [aberto, setAberto] = useState(false);
+  
+  const [dados, setDados] = useState(null);
+
+  useEffect(() => {        //teste de JSON
+    fetch('/teste.json')
+      .then(res => res.json())
+      .then(data => setDados(data));
+  }, []);
+
 
   return (
     <>
@@ -59,6 +67,9 @@ function App() {
           )}
         </div>
       </div>
+      <div>
+      {dados && <h1>{dados.nome}</h1>} 
+    </div>
     </>
   );
 }
