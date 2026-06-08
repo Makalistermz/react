@@ -1,4 +1,5 @@
 // Componente pai
+import { useState } from 'react'
 import './App.css'
 
 // Importar o componente filho
@@ -36,15 +37,30 @@ function ButtonTwo() {
 
 
 function App() {
+  const [aberto, setAberto] = useState(false);
+
   return (
     <>
-      <h1 className="title">Olá, Mundo!</h1>
-      <p style={{ fontWeight: pessoa.FontWeight }}>Olá, meu nome é {pessoa.nome}, tenho {pessoa.idade} anos e moro em {pessoa.cidade}</p>
-      <ul>{ListaDeLivros}</ul>
-      <MyButton/>
-      <button onClick={cliqueAqui}>Clique aqui!</button>
+      <div className={`container ${aberto ? 'container-open' : ''}`}>
+        <h1 className="title">Olá, Mundo!</h1>
+        <p style={{ fontWeight: pessoa.FontWeight }}>Olá, meu nome é {pessoa.nome}, tenho {pessoa.idade} anos e moro em {pessoa.cidade}</p>
+        <ul>{ListaDeLivros}</ul>
+        <MyButton/>
+        <button onClick={cliqueAqui}>Clique aqui!</button>
+        <div>
+          <button onClick={() => setAberto(!aberto)}>
+            Menu
+          </button>
+          {aberto && (
+            <div>
+              <h2>Menu aberto</h2>
+              <p>Conteudo aberto</p>
+            </div>
+          )}
+        </div>
+      </div>
     </>
-  )
+  );
 }
 
 export default App
