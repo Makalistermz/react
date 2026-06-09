@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "nome": "Fakhar Rose Gold",
+    "preco": 199.90
+  },
+  {
+    "id": 2,
+    "nome": "Attar Al Wesal",
+    "preco": 149.90
+  },
+  {
+    "id": 3,
+    "nome": "L'Interdit",
+    "preco": 249.90
+  }
+]
