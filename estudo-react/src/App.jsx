@@ -55,6 +55,7 @@ function App() {
         <h1 className="title">Olá, Mundo!</h1>
         <p style={{ fontWeight: pessoa.FontWeight }}>Olá, meu nome é {pessoa.nome}, tenho {pessoa.idade} anos e moro em {pessoa.cidade}</p>
         <ul>{ListaDeLivros}</ul>
+        {dados && <h1>{dados.nome}</h1>}
         <MyButton/>
         <button onClick={cliqueAqui}>Clique aqui!</button>
         <div>
@@ -71,8 +72,7 @@ function App() {
           <Desafio2/>
         </div>
       </div>
-      <div>
-        {dados && <h1>{dados.nome}</h1>} 
+      <div> 
       </div>
     </>
   );

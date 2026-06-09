@@ -10,7 +10,6 @@ function Desafio2() {
             <li key={perfume.id}>
                 <h3>{perfume.nome}</h3>
                 <p>R$ {perfume.preco}</p>
-                <p>Quantidade de perfumes no estoque {perfumes.length}</p>
             </li>
         )
 
@@ -29,6 +28,7 @@ function Desafio2() {
             { mostrar && (
                 <div>
                     <ul>{listaPerfume}</ul>
+                    <p>Quantidade de perfumes no estoque {perfumes.length}</p>
                     <button onClick={ () => setMostrar(!mostrar)}>
                         {mostrar ? 'Ocultar perfumes' : 'Mostrar perfumes'}
                     </button>
