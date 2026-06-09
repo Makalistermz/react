@@ -5,6 +5,7 @@ import './App.css'
 // Importar o componente filho
 import MyButton from './components/MyButton'
 import Desafio from './components/Desafio'
+import Desafio2 from './components/Desafio2'
 
 const pessoa = {
   nome: 'Makalister',
@@ -67,6 +68,7 @@ function App() {
             </div>
           )}
           <Desafio/>
+          <Desafio2/>
         </div>
       </div>
       <div>
